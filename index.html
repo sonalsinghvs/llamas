@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+  </head>
+
+  <body>
+    <div id="app">
+      <h2>Fun facts about Llamas</h2>
+      <ol>
+        <todo-item
+        v-for="item in llamaFacts"
+        v-bind:todo="item"
+        v-bind:key="item.id">
+        </todo-item>
+      </ol>
+    </div>
+    <div id="app2">
+      <h2>{{message}}</h2>
+      <p v-if="llamaFact===true">A baby llama is called a "cria" which is Spanish for baby.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
